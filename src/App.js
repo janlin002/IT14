@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import FormikYup1 from './Demo/formik-yup1';
 import FormikYup2 from './Demo/formik-yup2';
+import ReactHookForm from './Demo/react-hook-form'
 
 const Header = () =>{
   return (
@@ -17,6 +18,11 @@ const Header = () =>{
           Formik+Yup-2
         </Link>
       </button>
+      <button>
+        <Link to="/react-hook-form">
+          react-hook-form
+        </Link>
+      </button>
     </div>
   )
 }
@@ -29,6 +35,7 @@ function App() {
         <Routes>
           <Route path="/formik-yup-1" element={<FormikYup1 />} />
           <Route path="/formik-yup-2" element={<FormikYup2 />} />
+          <Route path="/react-hook-form" element={<ReactHookForm />} />
         </Routes>
       </Router>
     </>
