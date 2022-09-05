@@ -15,7 +15,7 @@ const ReactHookForm = () => {
                 {errors.exampleRequired && <span>This field is required</span>}
             </div>
             <input type="submit" />
-            {/* <button onClick={()=>setValue('exampleRequired', '12345')}>點擊</button> */}
+            <button onClick={()=>setValue('exampleRequired', '12345')}>點擊</button>
         </form>
     </> 
   )
@@ -28,5 +28,3 @@ export default ReactHookForm
 // watch -> 觀看每一特定的值
 // formState: { errors } ->
 // setValue -> 更改已綁定的值
-
-// 可以加入Fomrik，感覺是為了統一管理
