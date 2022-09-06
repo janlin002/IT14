@@ -1,12 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import { useFormik, Formik, Form, Field } from 'formik';
+import {
+  useFormik, Formik, Form, Field,
+} from 'formik'
 import * as Yup from 'yup'
 
 const initValue = {
   name: '',
   age: '',
-  sex: ''
+  sex: '',
 }
 
 const myValidation = Yup.object().shape({
@@ -20,14 +22,14 @@ const myValidation = Yup.object().shape({
 
 function FormikYup() {
   return (
-    <Formik 
+    <Formik
       initialValues={initValue}
       validationSchema={myValidation}
-      onSubmit={values => {
-        console.log(values);
+      onSubmit={(values) => {
+        console.log(values)
       }}
     >
-      {({ errors, touched })=>(
+      {({ errors, touched }) => (
         <Form>
           {/* name */}
           <div>
@@ -37,7 +39,7 @@ function FormikYup() {
               <div>{errors.name}</div>
             ) : null}
           </div>
-          
+
           {/* age */}
           <div>
             <span>age: </span>
@@ -55,12 +57,12 @@ function FormikYup() {
               <div>{errors.sex}</div>
             ) : null}
           </div>
-          
+
           <button type="submit">Submit</button>
         </Form>
       )}
     </Formik>
-  );
+  )
 }
 
-export default FormikYup;
+export default FormikYup

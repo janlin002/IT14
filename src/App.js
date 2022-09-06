@@ -1,11 +1,15 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React from 'react'
+import {
+  HashRouter as Router, Routes, Route, Link,
+} from 'react-router-dom'
 
-import FormikYup1 from './Demo/formik-yup1';
-import FormikYup2 from './Demo/formik-yup2';
+import FormikYup1 from './Demo/formik-yup1'
+import FormikYup2 from './Demo/formik-yup2'
 import ReactHookForm from './Demo/react-hook-form'
+import JSDOC from './Demo/jsdoc'
+import IntroJS from './Demo/introJS'
 
-const Header = () =>{
+function Header() {
   return (
     <div>
       <button>
@@ -23,23 +27,33 @@ const Header = () =>{
           react-hook-form
         </Link>
       </button>
+      <button>
+        <Link to="/js-doc">
+          JSDOC
+        </Link>
+      </button>
+      <button>
+        <Link to="/intro-js">
+          IntroJS
+        </Link>
+      </button>
     </div>
   )
 }
 
 function App() {
   return (
-    <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/formik-yup-1" element={<FormikYup1 />} />
-          <Route path="/formik-yup-2" element={<FormikYup2 />} />
-          <Route path="/react-hook-form" element={<ReactHookForm />} />
-        </Routes>
-      </Router>
-    </>
-  );
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/formik-yup-1" element={<FormikYup1 />} />
+        <Route path="/formik-yup-2" element={<FormikYup2 />} />
+        <Route path="/react-hook-form" element={<ReactHookForm />} />
+        <Route path="/js-doc" element={<JSDOC />} />
+        <Route path="/intro-js" element={<IntroJS />} />
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App

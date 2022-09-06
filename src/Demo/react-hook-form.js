@@ -1,23 +1,23 @@
 import React from 'react'
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form'
 
-const ReactHookForm = () => {
-    const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
+function ReactHookForm() {
+  const {
+    register, handleSubmit, watch, formState: { errors }, setValue,
+  } = useForm()
 
-    const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) => console.log(data)
 
-    console.log(watch("exampleRequired")); // 監聽元素
+  console.log(watch('exampleRequired')) // 監聽元素
   return (
-    <>
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <input {...register("exampleRequired", { required: true })} />
-            <div>
-                {errors.exampleRequired && <span>This field is required</span>}
-            </div>
-            <input type="submit" />
-            <button onClick={()=>setValue('exampleRequired', '12345')}>點擊</button>
-        </form>
-    </> 
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input {...register('exampleRequired', { required: true })} />
+      <div>
+        {errors.exampleRequired && <span>This field is required</span>}
+      </div>
+      <input type="submit" />
+      <button onClick={() => setValue('exampleRequired', '12345')}>點擊</button>
+    </form>
   )
 }
 

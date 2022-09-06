@@ -5,11 +5,10 @@ import * as Yup from 'yup'
 const initValue = {
   name: '',
   age: '',
-  sex: ''
+  sex: '',
 }
 
-const FormikYup2 = () => {
-
+function FormikYup2() {
   const formik = useFormik({
     initialValues: initValue,
     validationSchema: Yup.object({
@@ -20,50 +19,59 @@ const FormikYup2 = () => {
       sex: Yup.string()
         .required('性別 為必填欄位'),
     }),
-    onSubmit: (values) => {console.log(values)}
+    onSubmit: (values) => { console.log(values) },
   })
   return (
     <form onSubmit={formik.handleSubmit}>
       {/* name */}
       <div>
         <label htmlFor="name">name: </label>
-        <input type="text" name="name" id="name" 
+        <input
+          type="text"
+          name="name"
+          id="name"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.name} 
+          value={formik.values.name}
         />
         {formik.touched.name && formik.errors.name && (
-          <span className='text-red-400'>{formik.errors.name}</span>
+          <span className="text-red-400">{formik.errors.name}</span>
         )}
       </div>
 
       {/* age */}
       <div>
         <label htmlFor="age">age: </label>
-        <input type="text" name="age" id="age"
+        <input
+          type="text"
+          name="age"
+          id="age"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.age} 
+          value={formik.values.age}
         />
         {formik.touched.age && formik.errors.age && (
-          <span className='text-red-400'>{formik.errors.age}</span>
+          <span className="text-red-400">{formik.errors.age}</span>
         )}
       </div>
 
       {/* sex */}
       <div>
         <label htmlFor="sex">sex: </label>
-        <input type="text" name="sex" id="sex" 
+        <input
+          type="text"
+          name="sex"
+          id="sex"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.sex} 
+          value={formik.values.sex}
         />
         {formik.touched.sex && formik.errors.sex && (
-          <span className='text-red-400'>{formik.errors.sex}</span>
+          <span className="text-red-400">{formik.errors.sex}</span>
         )}
 
       </div>
-      
+
       <button type="submit">Submit</button>
     </form>
   )
