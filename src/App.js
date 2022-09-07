@@ -8,6 +8,8 @@ import FormikYup2 from './Demo/formik-yup2'
 import ReactHookForm from './Demo/react-hook-form'
 import JSDOC from './Demo/jsdoc'
 import IntroJS from './Demo/introJS'
+import IntroJSHints from './Demo/introJS-Hints'
+import ReduxLogger from './Demo/redux-logger'
 
 function Header() {
   return (
@@ -37,6 +39,16 @@ function Header() {
           IntroJS
         </Link>
       </button>
+      <button>
+        <Link to="/intro-js-hints">
+          IntroJSHints
+        </Link>
+      </button>
+      <button>
+        <Link to="/redux-logger">
+          ReduxLogger
+        </Link>
+      </button>
     </div>
   )
 }
@@ -51,6 +63,8 @@ function App() {
         <Route path="/react-hook-form" element={<ReactHookForm />} />
         <Route path="/js-doc" element={<JSDOC />} />
         <Route path="/intro-js" element={<IntroJS />} />
+        <Route path="/intro-js-hints" element={<IntroJSHints />} />
+        <Route path="/redux-logger" element={<ReduxLogger />} />
       </Routes>
     </Router>
   )
