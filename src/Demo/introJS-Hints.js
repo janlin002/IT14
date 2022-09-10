@@ -29,6 +29,10 @@ function IntroJSHints() {
         <button id="contact">Contact Us</button>
       </div>
     </>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0c1804a49f9530b8e57bd0e7b46ffc0956205ecc
   )
 }
 

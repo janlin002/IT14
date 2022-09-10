@@ -32,8 +32,11 @@
     "react-router-dom": "^6.3.0",
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
+<<<<<<< HEAD
     "redux-saga": "^1.2.1",
     "redux-thunk": "^2.4.1",
+=======
+>>>>>>> 0c1804a49f9530b8e57bd0e7b46ffc0956205ecc
     "style-loader": "^3.3.1",
     "yup": "^0.32.11"
   },
