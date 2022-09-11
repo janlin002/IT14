@@ -12,6 +12,7 @@ import IntroJS from './Demo/introJS'
 import IntroJSHints from './Demo/introJS-Hints'
 import ReduxLogger from './Demo/redux-logger'
 import ReduxThunk from './Demo/redux-thunk'
+import ReactModal from './Demo/react-modal'
 
 function Header() {
   return (
@@ -56,6 +57,11 @@ function Header() {
           ReduxThunk
         </Link>
       </button>
+      <button>
+        <Link to="/react-modal">
+          ReactModal
+        </Link>
+      </button>
     </div>
   )
 }
@@ -73,6 +79,7 @@ function App() {
         <Route path="/intro-js-hints" element={<IntroJSHints />} />
         <Route path="/redux-logger" element={<ReduxLogger />} />
         <Route path="/redux-thunk" element={<ReduxThunk />} />
+        <Route path="/react-modal" element={<ReactModal />} />
       </Routes>
     </Router>
   )
