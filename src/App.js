@@ -13,6 +13,8 @@ import IntroJSHints from './Demo/introJS-Hints'
 import ReduxLogger from './Demo/redux-logger'
 import ReduxThunk from './Demo/redux-thunk'
 import ReactModal from './Demo/react-modal'
+import ReactJoyride from './Demo/react-joyride'
+import JoditReact from './Demo/jodit-react'
 
 function Header() {
   return (
@@ -62,6 +64,16 @@ function Header() {
           ReactModal
         </Link>
       </button>
+      <button>
+        <Link to="/react-joyride">
+          ReactJoyride
+        </Link>
+      </button>
+      <button>
+        <Link to="/jodit-react">
+          JoditReact
+        </Link>
+      </button>
     </div>
   )
 }
@@ -80,6 +92,8 @@ function App() {
         <Route path="/redux-logger" element={<ReduxLogger />} />
         <Route path="/redux-thunk" element={<ReduxThunk />} />
         <Route path="/react-modal" element={<ReactModal />} />
+        <Route path="/react-joyride" element={<ReactJoyride />} />
+        <Route path="/jodit-react" element={<JoditReact />} />
       </Routes>
     </Router>
   )
