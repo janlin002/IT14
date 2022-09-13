@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
-import { IntlProvider, FormattedMessage } from 'react-intl'
+import { IntlProvider, FormattedMessage, useIntl } from 'react-intl'
 
 import zh from '../i18n/zh'
 import en from '../i18n/en'
@@ -33,6 +33,10 @@ function ReactIntl() {
 }
 
 function Content({ setLocale }) {
+  const intl = useIntl()
+  const data = intl.formatMessage({ id: 'app.learn' }, { name: 'React' })
+
+  console.log(data)
   return (
     <div className="App">
       <header className="App-header">
