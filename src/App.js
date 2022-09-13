@@ -15,6 +15,7 @@ import ReduxThunk from './Demo/redux-thunk'
 import ReactModal from './Demo/react-modal'
 import ReactJoyride from './Demo/react-joyride'
 import JoditReact from './Demo/jodit-react'
+import ReactIntl from './Demo/react-intl'
 
 function Header() {
   return (
@@ -74,6 +75,11 @@ function Header() {
           JoditReact
         </Link>
       </button>
+      <button>
+        <Link to="/react-intl">
+          ReactIntl
+        </Link>
+      </button>
     </div>
   )
 }
@@ -94,6 +100,7 @@ function App() {
         <Route path="/react-modal" element={<ReactModal />} />
         <Route path="/react-joyride" element={<ReactJoyride />} />
         <Route path="/jodit-react" element={<JoditReact />} />
+        <Route path="/react-intl" element={<ReactIntl />} />
       </Routes>
     </Router>
   )

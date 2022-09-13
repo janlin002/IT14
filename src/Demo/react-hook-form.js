@@ -16,7 +16,11 @@ function ReactHookForm() {
         {errors.exampleRequired && <span>This field is required</span>}
       </div>
       <input type="submit" />
-      <button onClick={() => setValue('exampleRequired', '12345')}>點擊</button>
+      <button
+        type="button"
+        onClick={() => setValue('exampleRequired', '12345')}
+      >點擊
+      </button>
     </form>
   )
 }
