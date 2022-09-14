@@ -16,6 +16,7 @@ import ReactModal from './Demo/react-modal'
 import ReactJoyride from './Demo/react-joyride'
 import JoditReact from './Demo/jodit-react'
 import ReactIntl from './Demo/react-intl'
+import Reacti18next from './Demo/react-i18next'
 
 function Header() {
   return (
@@ -80,6 +81,11 @@ function Header() {
           ReactIntl
         </Link>
       </button>
+      <button>
+        <Link to="/react-i18next">
+          Reacti18next
+        </Link>
+      </button>
     </div>
   )
 }
@@ -101,6 +107,7 @@ function App() {
         <Route path="/react-joyride" element={<ReactJoyride />} />
         <Route path="/jodit-react" element={<JoditReact />} />
         <Route path="/react-intl" element={<ReactIntl />} />
+        <Route path="/react-i18next" element={<Reacti18next />} />
       </Routes>
     </Router>
   )
