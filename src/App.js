@@ -17,6 +17,7 @@ import ReactJoyride from './Demo/react-joyride'
 import JoditReact from './Demo/jodit-react'
 import ReactIntl from './Demo/react-intl'
 import Reacti18next from './Demo/react-i18next'
+import ReactSelect from './Demo/react-select'
 
 function Header() {
   return (
@@ -86,6 +87,11 @@ function Header() {
           Reacti18next
         </Link>
       </button>
+      <button>
+        <Link to="/react-select">
+          ReactSelect
+        </Link>
+      </button>
     </div>
   )
 }
@@ -108,6 +114,7 @@ function App() {
         <Route path="/jodit-react" element={<JoditReact />} />
         <Route path="/react-intl" element={<ReactIntl />} />
         <Route path="/react-i18next" element={<Reacti18next />} />
+        <Route path="/react-select" element={<ReactSelect />} />
       </Routes>
     </Router>
   )
