@@ -18,6 +18,7 @@ import JoditReact from './Demo/jodit-react'
 import ReactIntl from './Demo/react-intl'
 import Reacti18next from './Demo/react-i18next'
 import ReactSelect from './Demo/react-select'
+import ReactTable from './Demo/react-table'
 
 function Header() {
   return (
@@ -92,6 +93,11 @@ function Header() {
           ReactSelect
         </Link>
       </button>
+      <button>
+        <Link to="/react-table">
+          ReactTable
+        </Link>
+      </button>
     </div>
   )
 }
@@ -115,6 +121,7 @@ function App() {
         <Route path="/react-intl" element={<ReactIntl />} />
         <Route path="/react-i18next" element={<Reacti18next />} />
         <Route path="/react-select" element={<ReactSelect />} />
+        <Route path="/react-table" element={<ReactTable />} />
       </Routes>
     </Router>
   )
