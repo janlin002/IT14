@@ -14,6 +14,7 @@ import Reacti18next from './Demo/react-i18next'
 import ReactSelect from './Demo/react-select'
 import ReactTable from './Demo/react-table'
 import ReactDayPicker from './Demo/react-day-picker'
+import JSPDF from './Demo/jspdf'
 
 const routerList = [
   {
@@ -95,6 +96,11 @@ const routerList = [
     component: ReactDayPicker,
     path: '/react-day-picker',
     name: 'ReactDayPicker',
+  },
+  {
+    component: JSPDF,
+    path: '/jspdf',
+    name: 'JSPDF',
   },
 ]
 
